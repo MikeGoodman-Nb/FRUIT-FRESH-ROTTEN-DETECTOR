@@ -1,0 +1,238 @@
+/* ========== RESET CSS ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ========== GLOBAL STYLE ========== */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background: linear-gradient(#4ABDAC, #399184, #22574F);
+    min-height: 100vh;
+}
+
+/* ========== NAVBAR (GLASS + STICKY) ========== */
+nav {
+    position: sticky;
+    top: 20px;
+    /* biar floating ada jarak dari atas */
+    width: 80vw;
+    margin: 0 auto;
+    padding: 40px 80px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: rgba(255, 255, 255, 0.15);
+    /* glass transparency */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 5rem;
+
+    z-index: 999;
+    /* supaya tetap di atas */
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    width: 100%;
+    /* <--- WAJIB supaya justify-content bekerja */
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+}
+
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.2s ease;
+}
+
+nav a:hover {
+    opacity: 0.8;
+    transform: translateY(-2px);
+}
+
+
+/* ========== SECTIONS ========== */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+h1,
+h2,
+p {
+    color: white;
+}
+
+/* ========== UPLOAD SECTION (section 5) ========== */
+#detection input {
+    margin-top: 20px;
+}
+
+#detection button {
+    margin-top: 15px;
+    padding: 8px 18px;
+    border: none;
+    border-radius: 5px;
+    background-color: #295B71;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#detection button:hover {
+    opacity: 0.85;
+}
+
+.upload-container {
+    width: 400px;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    text-align: center;
+}
+
+.upload-container .preview {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 2px dashed #fff;
+    margin-bottom: 20px;
+}
+
+.upload-container button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    background: #ffffff33;
+    color: white;
+    backdrop-filter: blur(5px);
+    transition: 0.2s;
+}
+
+.upload-container button:hover {
+    background: #ffffff55;
+}
+
+/* ===== RESULT BOX ===== */
+.analysis {
+    margin-top: 30px;
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
+    border-radius: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    text-align: center;
+    color: white;
+}
+
+/* ===== CATEGORY BADGE ===== */
+.category-badge {
+    margin: 10px auto 20px;
+    padding: 10px 25px;
+    display: inline-block;
+    border-radius: 1rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.category-green {
+    background: #2ecc71;
+}
+
+.category-yellow {
+    background: #f1c40f;
+}
+
+.category-red {
+    background: #e74c3c;
+}
+
+/* ===== STATUS LEGEND ===== */
+.status-legend {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 20px 0;
+}
+
+.circle-group {
+    text-align: center;
+    color: white;
+}
+
+.circle {
+    width: 22px;
+    height: 22px;
+    display: inline-block;
+    border-radius: 50%;
+    margin-bottom: 5px;
+}
+
+.circle.green {
+    background: #2ecc71;
+}
+
+.circle.yellow {
+    background: #f1c40f;
+}
+
+.circle.red {
+    background: #e74c3c;
+}
+
+/* ===== CONFIDENCE BAR ===== */
+.confidence-bar {
+    width: 80%;
+    height: 18px;
+    margin: 15px auto;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+#confidenceFill {
+    height: 100%;
+    width: 0%;
+    transition: width 0.8s ease;
+}
+
+
+/* ========== FOOTER ========== */
+footer {
+    margin-top: 50px;
+    color: white;
+}
+
+/* footer background utama */
+footer p {
+    background-color: #295B71;
+    /* bagian copyright */
+    padding: 10px 0;
+}
+
+/* background belakang footer */
+footer {
+    background-color: #2C3E50;
+    padding-top: 20px;
+}

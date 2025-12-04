@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manage Before Gone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ===================== NAVBAR ===================== -->
+    <nav>
+        <ul>
+            <li><a href="#home">Homepage</a></li>
+            <li><a href="#detection">Detection</a></li>
+            <li><a href="#about">About Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- ===================== HERO / TITLE ===================== -->
+    <section id="home">
+        <h1 style="text-align: center; margin-top: 40px;">Manage Before Gone</h1>
+
+        <p style="max-width: 800px; margin: 20px auto; text-align: center;">
+            MBG hadir untuk mendukung Sustainable Development Goals (SDG 12): Responsible Consumption & Production —
+            dengan teknologi AI yang memantau kualitas produk, mengoptimalkan stok, dan mencegah food waste di
+            supermarket.
+        </p>
+    </section>
+
+    <!-- ===================== SECTION 1 ===================== -->
+    <section id="section1">
+        <h2>Section 1</h2>
+        <p>Isi kontenmu nanti di sini.</p>
+    </section>
+
+    <!-- ===================== SECTION 2 ===================== -->
+    <section id="section2">
+        <h2>Section 2</h2>
+        <p>Isi kontenmu nanti di sini.</p>
+    </section>
+
+    <!-- ===================== SECTION 3 ===================== -->
+    <section id="section3">
+        <h2>Section 3</h2>
+        <p>Isi kontenmu nanti di sini.</p>
+    </section>
+
+    <!-- ===================== SECTION 4 ===================== -->
+    <section id="section4">
+        <h2>Fitur - fitur MBG</h2>
+        <p>Isi kontenmu nanti di sini.</p>
+    </section>
+
+    <!-- ===================== SECTION 5 (UPLOAD IMAGE) ===================== -->
+    <!-- <section id="detection">
+        <h2>Freshness Detection</h2>
+
+        <div class="upload-container">
+            <img id="previewImage" src="assets/Image.png" class="preview" />
+
+            <input type="file" id="fileInput" accept="image/*" hidden />
+            <button id="uploadBtn" onclick="triggerUpload()">Upload Foto</button>
+
+            <button id="processBtn" onclick="uploadImage()" style="display:none;">
+                Proses Sekarang
+            </button>
+
+            <button id="changeBtn" onclick="resetImage()" style="display:none;">
+                Ganti Foto
+            </button>
+        </div>
+
+        <p id="result"></p>
+        <div id="analysisBox" class="analysis" style="display:none;">
+
+            <h3>Hasil Analisis</h3>
+
+            <div id="categoryBox" class="category-badge"></div>
+
+            <div class="status-legend">
+                <div class="circle-group">
+                    <span class="circle green"></span>
+                    <p>Segar</p>
+                </div>
+                <div class="circle-group">
+                    <span class="circle yellow"></span>
+                    <p>Layu</p>
+                </div>
+                <div class="circle-group">
+                    <span class="circle red"></span>
+                    <p>Tidak Layak</p>
+                </div>
+            </div>
+
+            <h4>Confidence Score</h4>
+            <div class="confidence-bar">
+                <div id="confidenceFill"></div>
+            </div>
+            <p id="confidenceValue"></p>
+
+        </div>
+
+    </section> -->
+    <!-- ===================== SECTION 5 (UPLOAD IMAGE) ===================== -->
+    <section id="detection">
+        <h2>Freshness Detection</h2>
+
+        <div class="upload-container">
+            <img id="previewImage" src="assets/Image.png" class="preview" />
+
+            <input type="file" id="fileInput" accept="image/*" hidden />
+            <button id="uploadBtn" onclick="triggerUpload()">Upload Foto</button>
+
+            <button id="processBtn" onclick="uploadImage()" style="display:none;">
+                Proses Sekarang
+            </button>
+
+            <button id="changeBtn" onclick="resetImage()" style="display:none;">
+                Ganti Foto
+            </button>
+        </div>
+
+        <p id="result"></p>
+
+        <!-- HASIL ANALISIS -->
+        <div id="analysisBox" class="analysis" style="display:none;">
+
+            <h3>Hasil Analisis</h3>
+
+            <div id="categoryBox" class="category-badge"></div>
+
+            <div class="status-legend">
+                <div class="circle-group">
+                    <span class="circle green"></span>
+                    <p>Segar</p>
+                </div>
+                <div class="circle-group">
+                    <span class="circle yellow"></span>
+                    <p>Layu</p>
+                </div>
+                <div class="circle-group">
+                    <span class="circle red"></span>
+                    <p>Tidak Layak</p>
+                </div>
+            </div>
+
+            <h4>Confidence Score</h4>
+            <div class="confidence-bar">
+                <div id="confidenceFill"></div>
+            </div>
+            <p id="confidenceValue"></p>
+
+        </div>
+    </section>
+
+
+
+    <!-- ===================== ABOUT US SECTION ===================== -->
+    <!-- <section id="about">
+        <h2>About Us</h2>
+        <p>Isi informasi tentang tim / project kamu nanti.</p>
+    </section> -->
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer style="text-align:center; margin-top:50px; padding:20px 0;">
+        <p>© 2025 Manage Before Gone — All rights reserved.</p>
+    </footer>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+
+</html>
