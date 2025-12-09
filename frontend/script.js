@@ -78,6 +78,7 @@ async function uploadImage() {
       method: "POST",
       body: formData,
     });
+    console.log(response);
 
     if (!response.ok) {
       resultText.innerText = "Server error.";

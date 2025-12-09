@@ -1,68 +1,22 @@
-/* ========== RESET CSS ========== */
+/*  RESET  */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* ========== GLOBAL STYLE ========== */
+/*  GLOBAL  */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
-    color: white;
     background: linear-gradient(#4ABDAC, #399184, #22574F);
+    color: white;
     min-height: 100vh;
 }
 
-/* ========== NAVBAR (GLASS + STICKY) ========== */
-nav {
-    position: sticky;
-    top: 20px;
-    /* biar floating ada jarak dari atas */
-    width: 80vw;
-    margin: 0 auto;
-    padding: 40px 80px;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    background: rgba(255, 255, 255, 0.15);
-    /* glass transparency */
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    border-radius: 5rem;
-
-    z-index: 999;
-    /* supaya tetap di atas */
-}
-
-nav ul {
-    display: flex;
-    list-style: none;
-    width: 100%;
-    /* <--- WAJIB supaya justify-content bekerja */
-    justify-content: space-between;
-    padding: 0;
-    margin: 0;
-}
-
-
-nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.2s ease;
-}
-
-nav a:hover {
-    opacity: 0.8;
-    transform: translateY(-2px);
-}
-
-
-/* ========== SECTIONS ========== */
 section {
     padding: 60px 20px;
     text-align: center;
@@ -74,57 +28,292 @@ p {
     color: white;
 }
 
-/* ========== UPLOAD SECTION (section 5) ========== */
-#detection input {
-    margin-top: 20px;
+/*  NAVBAR  */
+nav {
+    position: sticky;
+    top: 20px;
+    width: 80vw;
+    margin: 0 auto;
+    padding: 40px 80px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(25px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 5rem;
+
+    z-index: 999;
 }
 
-#detection button {
-    margin-top: 15px;
-    padding: 8px 18px;
-    border: none;
-    border-radius: 5px;
-    background-color: #295B71;
+nav ul {
+    display: flex;
+    width: 100%;
+    list-style: none;
+    justify-content: space-between;
+}
+
+nav a {
+    font-family: "Inter", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+
     color: white;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+
+nav a:hover {
+    opacity: 0.8;
+    transform: translateY(-2px);
+}
+
+/*  HOME SECTION                                                              */
+#home h1 {
+    font-family: "Cal Sans", sans-serif;
+    font-size: 36px;
+    font-weight: 400;
+}
+
+#home p {
+    font-family: "Inter", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    max-width: 900px;
+    margin: 20px auto;
+}
+
+/*  SECTION 1                                                                 */
+#section1 {
+    display: flex;
+    justify-content: center;
+    padding: 60px 0;
+}
+
+.section1-container {
+    position: relative;
+    width: fit-content;
+}
+
+.section1-image {
+    border-radius: 40px;
+    display: block;
+}
+
+.section1-title {
+    position: absolute;
+    top: 40%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+
+    font-family: "Cal Sans", sans-serif;
+    font-size: 60px;
+    font-weight: 400;
+    color: white;
+
+    text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+    white-space: nowrap;
+}
+
+.section1-button {
+    position: absolute;
+    top: 60%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+
+    width: 440px;
+    padding: 15px 40px;
+    color: white;
+
+    font-family: "Cal Sans", sans-serif;
+    font-size: 36px;
+    font-weight: 400;
+
+    border: none;
+    border-radius: 20px;
     cursor: pointer;
-    font-weight: bold;
+
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(25px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    transition: 0.25s ease;
 }
 
-#detection button:hover {
-    opacity: 0.85;
+.section1-button:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translate(-50%, -50%) scale(1.03);
 }
 
+/*  SECTION 2                                                                 */
+#section2 {
+    display: flex;
+    justify-content: center;
+    padding: 60px 0;
+}
+
+.section2-container {
+    position: relative;
+    width: fit-content;
+}
+
+.section2-image {
+    border-radius: 40px;
+    display: block;
+}
+
+.section2-text {
+    position: absolute;
+    top: 50%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+
+    max-width: 25%;
+    padding: 20px 35px;
+
+    font-family: "Cal Sans", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+    color: #34495E;
+
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(25px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/*  SECTION 3                                                                 */
+#section3 {
+    display: flex;
+    justify-content: center;
+    padding: 60px 0;
+}
+
+.section3-container {
+    position: relative;
+    width: fit-content;
+}
+
+.section3-image {
+    border-radius: 40px;
+    display: block;
+}
+
+.section3-text {
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+
+    max-width: 25%;
+    padding: 20px 35px;
+
+    font-family: "Cal Sans", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+    color: #34495E;
+
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(25px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/*  SECTION 4 – FEATURES                                                      */
+#section4 {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.section4-title {
+    font-family: "Cal Sans", sans-serif;
+    font-size: 60px;
+    font-weight: 400;
+    margin-bottom: 40px;
+}
+
+.features-grid {
+    width: 70%;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.feature-card {
+    padding: 40px 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(25px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    transition: 0.3s ease;
+}
+
+.feature-card:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: scale(1.03);
+}
+
+.feature-card img {
+    margin-bottom: 20px;
+}
+
+.feature-card p {
+    font-family: "Cal Sans", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+/*  SECTION 5 – DETECTION                                                     */
 .upload-container {
     width: 400px;
     margin: 0 auto;
     padding: 30px;
+
+    text-align: center;
+
     border-radius: 20px;
     background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(10px);
-    text-align: center;
+    backdrop-filter: blur(25px);
 }
 
-.upload-container .preview {
+.preview {
     width: 250px;
     height: 250px;
     object-fit: cover;
+
     border-radius: 15px;
-    border: 2px dashed #fff;
+    border: 2px dashed white;
     margin-bottom: 20px;
 }
 
 .upload-container button {
-    display: block;
     width: 100%;
-    padding: 12px;
     margin: 10px 0;
+    padding: 12px;
+
     border: none;
     border-radius: 10px;
-    font-weight: bold;
+
     cursor: pointer;
+    font-weight: bold;
+
     background: #ffffff33;
-    color: white;
     backdrop-filter: blur(5px);
+    color: white;
+
     transition: 0.2s;
 }
 
@@ -132,26 +321,29 @@ p {
     background: #ffffff55;
 }
 
-/* ===== RESULT BOX ===== */
 .analysis {
-    margin-top: 30px;
+    margin: 30px auto;
     padding: 25px;
+
+    max-width: 1200px;
+    text-align: center;
+
+    border-radius: 1.5rem;
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(8px);
-    border-radius: 1.5rem;
     border: 1px solid rgba(255, 255, 255, 0.25);
-    text-align: center;
-    color: white;
 }
 
-/* ===== CATEGORY BADGE ===== */
+/* Category Badge */
 .category-badge {
     margin: 10px auto 20px;
     padding: 10px 25px;
-    display: inline-block;
-    border-radius: 1rem;
+
     font-weight: bold;
     font-size: 1.2rem;
+
+    display: inline-block;
+    border-radius: 1rem;
     color: #fff;
 }
 
@@ -167,22 +359,23 @@ p {
     background: #e74c3c;
 }
 
-/* ===== STATUS LEGEND ===== */
+/* Status Legend */
 .status-legend {
+    margin: 20px 0;
+
     display: flex;
     justify-content: center;
     gap: 40px;
-    margin: 20px 0;
 }
 
 .circle-group {
     text-align: center;
-    color: white;
 }
 
 .circle {
     width: 22px;
     height: 22px;
+
     display: inline-block;
     border-radius: 50%;
     margin-bottom: 5px;
@@ -200,39 +393,33 @@ p {
     background: #e74c3c;
 }
 
-/* ===== CONFIDENCE BAR ===== */
+/* Confidence Bar */
 .confidence-bar {
     width: 80%;
     height: 18px;
+
     margin: 15px auto;
+
     background: rgba(255, 255, 255, 0.2);
     border-radius: 10px;
-    overflow: hidden;
     border: 1px solid rgba(255, 255, 255, 0.3);
+    overflow: hidden;
 }
 
 #confidenceFill {
     height: 100%;
-    width: 0%;
+    width: 0;
     transition: width 0.8s ease;
 }
 
-
-/* ========== FOOTER ========== */
-footer {
-    margin-top: 50px;
-    color: white;
-}
-
-/* footer background utama */
-footer p {
-    background-color: #295B71;
-    /* bagian copyright */
-    padding: 10px 0;
-}
-
-/* background belakang footer */
+/*  FOOTER  */
 footer {
     background-color: #2C3E50;
     padding-top: 20px;
+    color: white;
+}
+
+footer p {
+    background-color: #295B71;
+    padding: 10px 0;
 }
