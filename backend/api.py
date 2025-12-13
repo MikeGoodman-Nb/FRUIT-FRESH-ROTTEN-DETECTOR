@@ -4,6 +4,7 @@ import tensorflow as tf
 import numpy as np
 from PIL import Image
 import io
+import os
 
 app = Flask(__name__)
 
@@ -11,7 +12,13 @@ app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*"}})
 
 # Load model
-model = tf.keras.models.load_model("fruit_model_fixed.keras")
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+MODEL_PATH = os.path.join(BASE_DIR, "fruit_model_fixed.keras")
+
+model = tf.keras.models.load_model(MODEL_PATH)
+# model = tf.keras.models.load_model("fruit_model_fixed.keras")
 
 class_names = [
     "freshapples",
