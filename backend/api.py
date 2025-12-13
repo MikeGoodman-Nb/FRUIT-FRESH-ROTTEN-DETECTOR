@@ -15,8 +15,10 @@ CORS(app, resources={r"/*": {"origins": "*"}})
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-MODEL_PATH = os.path.join(BASE_DIR, "fruit_model_fixed.keras")
+# MODEL_PATH = os.path.join(BASE_DIR, "fruit_model_fixed.keras")
+# model = tf.keras.models.load_model(MODEL_PATH)
 
+MODEL_PATH = os.path.join(BASE_DIR, "healthy_vs_rotten.h5")
 model = tf.keras.models.load_model(MODEL_PATH)
 # model = tf.keras.models.load_model("fruit_model_fixed.keras")
 
