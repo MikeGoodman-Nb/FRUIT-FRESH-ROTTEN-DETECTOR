@@ -1,4 +1,6 @@
 flask
+flask-cors
 tensorflow==2.9.3
 numpy
 pillow
+gunicorn
